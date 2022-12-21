@@ -1,6 +1,6 @@
 ## Overview
 
-Deploy a Consul datacenter containing a single server and single client.
+Deploy a Consul datacenter containing a single server and clients, including DNS support.
 
 ## Prerequisites
 
@@ -11,9 +11,16 @@ Deploy a Consul datacenter containing a single server and single client.
 ## Deployment procedure
 
 1. Clone [learn-consul-docker](https://github.com/hashicorp/learn-consul-docker) repository ('git clone https://github.com/hashicorp/learn-consul-docker')
-2. Navigate to this directory.
-3. Go to 'datacenter-deploy' directory
-4. type `docker compose up -d`
+2. Navigate to this directory (`cd learn-consul-docker`).
+3. Go to 'datacenter-deploy-dns' directory (`cd datacenter-deploy-dns`)
+4. Update the DNS resolver on the host `cd lea', adding the following two lines:
+
+`nameserver 10.5.0.2  #our new Consul DNS server`
+`nameserver 1.1.1.1   #global DNS server`
+
+5. Ensure 
+6. Type `docker compose up -d`
+7. Confirm DNS is working by running `ping consul.service.consul`
 
 ## Testing procedure
 
