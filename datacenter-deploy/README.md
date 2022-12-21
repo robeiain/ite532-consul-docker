@@ -16,6 +16,7 @@ Deploy a Consul datacenter containing a single server and clients, including DNS
 4. Update the DNS resolver on the host `nano /etc/resolv.conf`, adding the following two lines after the existing name server:
 
 `nameserver 10.5.0.2  #our new Consul DNS server`
+
 `nameserver 1.1.1.1   #global DNS server`
 
 5. Type `docker compose up -d` to build the Consul environment
