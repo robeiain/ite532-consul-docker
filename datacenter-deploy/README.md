@@ -19,8 +19,9 @@ Deploy a Consul datacenter containing a single server and clients, including DNS
 
 `nameserver 1.1.1.1   #global DNS server`
 
-5. Type `docker compose up -d` to build the Consul environment
-6. Confirm DNS is working by running `ping consul.service.consul`
+5. Stop the local DNS server by typing `systemctl stop systemd-resolved`
+6. Type `docker compose up -d` to build the Consul environment
+7. Confirm DNS is working by running `ping consul.service.consul`
 
 ## Testing procedure
 
