@@ -12,7 +12,7 @@ Deploy a Consul datacenter containing a single server and clients, including DNS
 
 1. Clone [learn-consul-docker](https://github.com/hashicorp/learn-consul-docker) repository (`git clone https://github.com/hashicorp/learn-consul-docker`)
 2. Navigate to this directory (`cd learn-consul-docker`).
-3. Go to 'datacenter-deploy-dns' directory (`cd datacenter-deploy-dns`)
+3. Go to 'datacenter-deploy-secure' directory (`cd datacenter-deploy-secure`)
 4. Update the DNS resolver on the host `nano /etc/resolv.conf`, adding the following two lines after the existing name server:
 
 `nameserver 10.5.0.2  #our new Consul DNS server`
