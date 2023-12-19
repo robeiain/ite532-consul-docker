@@ -14,7 +14,7 @@ Deploy a Consul datacenter containing a single server and clients, including DNS
 2. Navigate to this directory (`cd learn-consul-docker`).
 3. Go to 'datacenter-deploy-secure' directory (`cd datacenter-deploy-dns`)
 4. Stop the local DNS server by typing `systemctl stop systemd-resolved`
-5. Update the DNS resolver on the host `nano /etc/resolv.conf`, adding the following two lines after the existing name server:
+5. Update the DNS resolver on the host `nano /etc/resolv.conf`, adding the following two lines before the existing name server:
 
 `nameserver 10.5.0.2  #our new Consul DNS server`
 
